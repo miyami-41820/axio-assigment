@@ -141,11 +141,11 @@ GET http://127.0.0.1:8000/flights/
 ---
 
 ### 2. Get All Available Coupons
-**Endpoint:** `GET /coupons/`
+**Endpoint:** `GET /coupon/`
 
 **Request:**
 ```
-GET http://127.0.0.1:8000/coupons/
+GET http://127.0.0.1:8000/coupon/
 ```
 
 **Response:**
