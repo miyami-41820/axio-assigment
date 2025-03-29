@@ -22,7 +22,7 @@ class Command(BaseCommand):
             destination = random.choice([loc for loc in locations if loc != departure])
             departure_time = datetime.now() + timedelta(days=random.randint(1, 30))
             destination_time = departure_time + timedelta(hours=random.randint(1, 5))
-            
+
             Flight.objects.create(
                 airline=random.choice(airlines),
                 departure_location=departure,

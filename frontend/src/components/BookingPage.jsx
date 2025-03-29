@@ -103,7 +103,7 @@ export default function BookingPage() {
       <Card sx={{ padding: 2, boxShadow: 3 }}>
         <Typography variant="h5">{flight?.airline}</Typography>
         <Typography>{flight?.departure_location} → {flight?.destination_location}</Typography>
-        <Typography>Departure: {flight?.departure_time}</Typography>
+        <Typography>Departure: {new Date(flight?.departure_time).toLocaleString()}</Typography>
         <Typography>Arrival: {new Date(flight.destination_time).toLocaleString()}</Typography>
       </Card>
 

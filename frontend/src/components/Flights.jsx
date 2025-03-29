@@ -114,7 +114,7 @@ export default function Flights() {
                       <strong>To:</strong> {flight.destination_location}
                     </Typography>
                     <Typography variant="body2" color="text.secondary">
-                      Departure: {flight.departure_time}
+                      Departure: {new Date(flight.departure_time).toLocaleString()}
                     </Typography>
                     <Typography variant="body2" color="text.secondary">
                       Arrival:{" "}

@@ -89,7 +89,9 @@ export default function Reservations() {
                   {reservation.flight.destination_location}
                 </Typography>
                 <Typography sx={{ fontWeight: "bold" }}>
-                  Departure: {reservation.flight.departure_time}
+                  Departure:{new Date(
+                    reservation.flight.departure_time
+                  ).toLocaleString()}
                 </Typography>
                 <Typography sx={{ fontWeight: "bold" }}>
                   Arrival:{" "}
