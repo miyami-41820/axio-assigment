@@ -6,7 +6,6 @@ from decimal import Decimal
 
 def validate_reservation(func):
     def wrapper(self, *args, **kwargs):
-        import pdb; pdb.set_trace()
         try:
             reservation_serializer = ReservationSerializer(data=kwargs.get('data'))
             if not reservation_serializer.is_valid():

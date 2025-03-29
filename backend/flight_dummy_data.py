@@ -27,7 +27,7 @@ class Command(BaseCommand):
                 airline=random.choice(airlines),
                 departure_location=departure,
                 destination_location=destination,
-                departure_time=departure_time.date(),
+                departure_time=departure_time,
                 destination_time=destination_time,
                 available_seats=random.randint(50, 200)
             )
