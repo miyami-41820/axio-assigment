@@ -28,7 +28,7 @@ git checkout develop
 
 3. **Install dependencies:**
    ```sh
-   pip install -r requirements.txt
+   pip install -r requirement.txt
    ```
 
 4. **Apply database migrations:**
