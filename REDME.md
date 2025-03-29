@@ -1,4 +1,4 @@
-# Axio Assignment set up step
+# Axio Assignment Setup Guide
 
 This project consists of a **Django backend** and a **Vite + React frontend**.
 
@@ -46,12 +46,14 @@ cd axio-assigment
    python3 manage.py runserver
    ```
 
-### Backend set up ends here, Here migrate will make the tables in the sqlite db [in memory db] and runserver will connect to that database and start the server on localhost. flight_dummy_data file contains the dummy data to enter into db for the testing purpose.
-
+### Backend setup explanation:
+- `migrate` will create tables in the SQLite database (in-memory DB).
+- `runserver` will connect to that database and start the backend server on `localhost`.
+- `flight_dummy_data` script inserts dummy data into the database for testing purposes.
 
 ---
 
-## Frontend Setup [inside axio-assigment]
+## Frontend Setup
 
 1. **Navigate to the frontend directory:**
    ```sh
@@ -68,6 +70,10 @@ cd axio-assigment
    npm run dev
    ```
 
+### Frontend setup explanation:
+- `npm i` installs the required packages.
+- `npm run dev` starts the frontend server on `localhost`.
+
 ---
 
 ## Testing the Application
@@ -77,17 +83,28 @@ cd axio-assigment
 
 ---
 
+## Running Unit Tests
+
+The backend unit tests are located inside the `airlineapp` app in the `tests.py` file. 
+
+To run all test cases, execute the following command at the same location as `manage.py` (where the backend server runs):
+
+```sh
+python3 manage.py test
+```
+
+This will run all defined test cases and verify the application's correctness.
+
+---
+
 ## Notes
 - The backend runs on `http://127.0.0.1:8000/`
 - The frontend runs on `http://localhost:5173/` (default Vite port)
-- Update the `.env` file if needed for backend or frontend configurations.
-
-
 
 # Airline Reservation System - API Documentation
 
 ## Overview
-This document provides details about the RESTful APIs developed for the Airline Reservation System. The backend is implemented using Python with Django, and the frontend can be built using Angular, React, or Vue.js.
+This document provides details about the RESTful APIs developed for the Airline Reservation System. The backend is implemented using Python with Django and Django Rest Framework.
 
 ## API Endpoints
 
@@ -112,8 +129,7 @@ GET http://127.0.0.1:8000/flights/
             "destination_time": "2025-04-28T00:35:07.814197Z",
             "departure_time": "2025-04-27",
             "available_seats": 67
-        },
-        ...
+        }
     ],
     "errors": {},
     "message": "Success"
@@ -140,8 +156,7 @@ GET http://127.0.0.1:8000/coupons/
             "code": "COUPON872",
             "discount_percentage": 40,
             "valid_until": "2025-05-03"
-        },
-        ...
+        }
     ],
     "errors": {},
     "message": "Success"
@@ -265,69 +280,9 @@ GET http://127.0.0.1:8000/confirmed-reservations/
             "seat_number": "46",
             "confirmed": true,
             "paid_price": 8438.0
-        },
-        ...
+        }
     ],
     "errors": {},
     "message": "Success"
 }
 ```
-
----
-
-### 7. View All Bookings
-**Endpoint:** `GET /reservations/`
-
-**Request:**
-```
-GET http://127.0.0.1:8000/reservations/
-```
-
-**Response:**
-```json
-{
-    "code": 200,
-    "data": [
-        {
-            "id": 3,
-            "flight": {
-                "flight_id": 7,
-                "airline": "Air India",
-                "departure_location": "Bangalore",
-                "destination_location": "Delhi",
-                "destination_time": "2025-04-27T23:35:07.816995Z",
-                "departure_time": "2025-04-27",
-                "available_seats": 74
-            },
-            "passenger_name": "Bob Smith",
-            "seat_number": "46",
-            "confirmed": true,
-            "paid_price": 8438.0
-        },
-        ...
-    ],
-    "errors": {},
-    "message": "Success"
-}
-```
-
-
-Flight Search & Availability: Users can search for available flights based on departure and destination locations.
-
-Fare Calculation: Retrieve fare details for a selected flight, including dynamic pricing based on demand.
-
-Discounts & Coupons: Apply promotional coupons to avail discounts on flight fares.
-
-Reservation System: Book flights by providing passenger details and making a payment.
-
-Booking Management: View all bookings, including confirmed and pending reservations.
-
-Seat Allocation: Assign seats dynamically during the booking process.
-
-Secure Payment Processing: Ensure secure transactions for booking payments.
-
-API-Based Integration: The system supports integration with external services for extended functionalities.
-
-Reservation Cancellation: Cancel an existing reservation and receive a refund based on the cancellation policy.
-
-
