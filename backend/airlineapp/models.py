@@ -7,7 +7,7 @@ class Flight(models.Model):
     departure_location = models.CharField(max_length=100)
     destination_location = models.CharField(max_length=100)
     destination_time = models.DateTimeField()
-    departure_time = models.DateField()
+    departure_time = models.DateTimeField()
     available_seats = models.IntegerField(default=100)
 
     def __str__(self):
