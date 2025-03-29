@@ -288,3 +288,39 @@ GET http://127.0.0.1:8000/confirmed-reservations/
     "message": "Success"
 }
 ```
+
+
+### 7. View All Reservation Bookings
+**Endpoint:** `GET /reservations/`
+
+**Request:**
+```
+GET http://127.0.0.1:8000/reservations/
+```
+
+**Response:**
+```json
+{
+    "code": 200,
+    "data": [
+        {
+            "id": 3,
+            "flight": {
+                "flight_id": 7,
+                "airline": "Air India",
+                "departure_location": "Bangalore",
+                "destination_location": "Delhi",
+                "destination_time": "2025-04-27T23:35:07.816995Z",
+                "departure_time": "2025-04-27",
+                "available_seats": 74
+            },
+            "passenger_name": "Bob Smith",
+            "seat_number": "46",
+            "confirmed": true,
+            "paid_price": 8438.0
+        }
+    ],
+    "errors": {},
+    "message": "Success"
+}
+```
