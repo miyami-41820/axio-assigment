@@ -213,11 +213,11 @@ GET http://127.0.0.1:8000/flights/3/fare/?coupon=COUPON872
 ---
 
 ### 5. Create a Reservation
-**Endpoint:** `POST /reservations/`
+**Endpoint:** `POST /reservation/`
 
 **Request (With Coupon):**
 ```
-POST http://127.0.0.1:8000/reservations/
+POST http://127.0.0.1:8000/reservation/
 Content-Type: application/json
 
 {
@@ -230,7 +230,7 @@ Content-Type: application/json
 
 **Request (Without Coupon):**
 ```
-POST http://127.0.0.1:8000/reservations/
+POST http://127.0.0.1:8000/reservation/
 Content-Type: application/json
 
 {
@@ -291,11 +291,11 @@ GET http://127.0.0.1:8000/confirmed-reservations/
 
 
 ### 7. View All Reservation Bookings
-**Endpoint:** `GET /reservations/`
+**Endpoint:** `GET /reservation/`
 
 **Request:**
 ```
-GET http://127.0.0.1:8000/reservations/
+GET http://127.0.0.1:8000/reservation/
 ```
 
 **Response:**
