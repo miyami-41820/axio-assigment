@@ -1,4 +1,4 @@
-# Axio Assignment setup step
+# Axio Assignment set up step
 
 This project consists of a **Django backend** and a **Vite + React frontend**.
 
@@ -45,6 +45,9 @@ cd axio-assigment
    ```sh
    python3 manage.py runserver
    ```
+
+### Backend set up ends here, Here migrate will make the tables in the sqlite db [in memory db] and runserver will connect to that database and start the server on localhost. flight_dummy_data file contains the dummy data to enter into db for the testing purpose.
+
 
 ---
 
