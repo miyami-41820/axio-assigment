@@ -7,6 +7,8 @@ This project consists of a **Django backend** and a **Vite + React frontend**.
 ```sh
 git clone https://github.com/miyami-41820/axio-assigment.git
 cd axio-assigment
+
+git checkout develop
 ```
 
 ---
