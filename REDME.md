@@ -229,6 +229,8 @@ Content-Type: application/json
     "flight_id": "3",
     "coupon": "COUPON872"
 }
+
+please make sure to enter correct coupon and flight id and price other wise you will get error response
 ```
 
 **Request (Without Coupon):**
