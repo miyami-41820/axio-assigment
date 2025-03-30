@@ -230,7 +230,7 @@ Content-Type: application/json
     "coupon": "COUPON872"
 }
 
-please make sure to enter correct coupon and flight id and price other wise you will get error response
+please make sure to enter correct coupon, flight id and price otherwise api will give error response
 ```
 
 **Request (Without Coupon):**
@@ -246,6 +246,8 @@ Content-Type: application/json
     "paid_price": 4310.364,
     "flight_id": "3"
 }
+
+please make sure to enter correct flight id and price other wise api will give error response
 ```
 
 **Response:**
