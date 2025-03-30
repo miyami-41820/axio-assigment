@@ -45,8 +45,11 @@ export default function Coupons() {
                 <Typography variant="h6">Coupon Name: {coupon.code}</Typography>
                 <Typography>Discount: {coupon.discount_percentage}%</Typography>
             </Stack>
-                <Typography>Expiry: {coupon.valid_until}</Typography>
-
+                {coupon.valid_until <= new Date().toISOString() ? (
+                  <Typography color="error">Expired:  {coupon.valid_until}</Typography>
+                ) : (
+                  <Typography color="success.main">Expiry: {coupon.valid_until}</Typography>
+                )}
             </Stack>
           </Card>
         ))
