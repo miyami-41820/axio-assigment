@@ -218,6 +218,9 @@ GET http://127.0.0.1:8000/flights/3/fare/?coupon=COUPON872
 **Request (With Coupon):**
 ```
 POST http://127.0.0.1:8000/reservation/
+```
+
+```
 Content-Type: application/json
 
 {
@@ -231,6 +234,9 @@ Content-Type: application/json
 **Request (Without Coupon):**
 ```
 POST http://127.0.0.1:8000/reservation/
+```
+
+```
 Content-Type: application/json
 
 {
