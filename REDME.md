@@ -255,11 +255,11 @@ Content-Type: application/json
 ---
 
 ### 6. View All Confirmed Bookings
-**Endpoint:** `GET /confirmed-reservations/`
+**Endpoint:** `GET /confirmed-reservation/`
 
 **Request:**
 ```
-GET http://127.0.0.1:8000/confirmed-reservations/
+GET http://127.0.0.1:8000/confirmed-reservation/
 ```
 
 **Response:**
